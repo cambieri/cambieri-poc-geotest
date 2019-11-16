@@ -1,9 +1,19 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Sort Places Test
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content class="ion-padding">
+  <ion-button expand="block" (click)="geoTest()">
+    <ion-icon slot="start" name="locate"></ion-icon>
+    GeotoolsService sortPlaces
+  </ion-button>
+  <ion-list *ngIf="showPlaces">
+    <ion-item *ngFor="let place of sortedPlaces">
+      <ion-label>{{place.name}} - {{place.capital}} - {{place.distanceToPrint}} km</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

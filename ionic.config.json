@@ -1,5 +1,7 @@
 {
   "name": "GeoTest",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

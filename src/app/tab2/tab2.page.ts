@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MockdataService } from '../services/mockdata.service';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  private originalPlaces: any[];
+
+  constructor(public mockdataService: MockdataService) {
+    this.originalPlaces = mockdataService.getClonedPlaces();
+  }
 
 }
